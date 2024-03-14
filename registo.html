@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="registo.css">
+</head>
+<body>
+  <div id="login-container">
+    <button onclick="window.location.href = 'index.html'">Back</button>
+    <div id="login-form">
+      <h2>Register</h2>
+      <form>
+        <div class="form-group">
+            <label for="text">Name:</label>
+            <input type="text" id="text" name="text">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div class="form-group">
+            <label for="password">Re-type Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="terms" value="agree"> I agree to the <a href="#" style="color: blue;">terms of use</a> and <a href="#" style="color: blue;">privacy policy</a>.
+          </label>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="login-button">Login</button>
+          <span> <a href="#">Learn more</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <p>Copyright 2024 - All rights reservedby...</p>
+  </footer>
+</body>
+</html>

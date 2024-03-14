@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  #forgot-password-link {
+    margin-top: 1 0px;
+  }
+  
+  #main-page {
+    text-align: center;
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 400px; 
+  }
+
+  footer {
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+}
