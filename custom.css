@@ -1,0 +1,31 @@
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px; /* Adiciona espaço entre o título e o input */
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="date"] {
+    width: calc(100% - 40px);
+    padding: 8px;
+    margin-bottom: 15px; /* Adiciona espaço entre os inputs */
+    height: 30px; /* Define a altura desejada para o input */
+}
+
+/* Remove o botão de fechar (X) */
+.modal-content .close {
+    display: none;
+}

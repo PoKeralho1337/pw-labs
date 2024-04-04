@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="custom.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile">
+                <img src="avatar.png" alt="Avatar">
+                <p>Bem-vindo, Utilizador</p>
+            </div>
+            <div class="actions">
+                <a class="btn" href="perfil.html">Editar Perfil</a>
+                <a class="btn" href="index.html">Terminar Sessão</a>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+ 
+                <h2 id="modal-title">Nova Tarefa</h2>
+ 
+                <form id="edit-task-form">
+                    <label for="descricaoTarefa">Descrição da Tarefa</label>
+                    <input type="text" id="descricaoTarefa" name="descricaoTarefa" required><br><br>
+                    <label for="dataTarefa">Data</label>
+                    <input type="date" id="dataTarefa" name="dataTarefa" required><br><br>
+                    <button type="submit" class="btn-save" form="edit-task-form">Salvar</button>
+                    <button type="button" class="btn-cancel" onclick="window.location.href='home.html'">Cancelar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <div class="btn-new-task">
+                <a class="btn btn-new" href="#modal">Nova Tarefa</a>
+            </div>
+            
+            <div class="table-title">
+                <h2>As minhas tarefas</h2>
+            </div>
+            <table class="tasks-table">
+                <thead>
+                    <tr>
+                        <th>Nome da Tarefa</th>
+                        <th>Data</th>
+                        <th>Estado da Tarefa</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="task-list">
+                    <tr>
+                        <td>Fazer Lab 1 de PW</td>
+                        <td>2024-04-04</td>
+                        <td><input type="checkbox"></td>
+                        <td><a class="btn btn-edit" href="#modal">Editar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Fazer Lab 2 de PW</td>
+                        <td>2024-04-05</td>
+                        <td><input type="checkbox"></td>
+                        <td><a class="btn btn-edit" href="#modal">Editar</a></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
