@@ -5,50 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Gerenciamento de Tarefas</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="custom.css"> 
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="profile">
-                <img src="avatar.png" alt="Avatar">
-                <p>Bem-vindo, Utilizador</p>
+        <div class="header d-flex justify-content-between align-items-center">
+            <div class="profile d-flex align-items-center">
+                <img src="avatar.png" alt="Avatar" class="rounded-circle" style="width: 100px; height: 100px;">
+                <p class="m-0 ml-2">Bem-vindo, Utilizador</p>
             </div>
             <div class="actions">
-                <a class="btn" href="perfil.html">Editar Perfil</a>
-                <a class="btn" href="index.html">Terminar Sessão</a>
+                <a class="btn btn-primary mr-2" href="perfil.html">Editar Perfil</a>
+                <a class="btn btn-secondary" href="index.html">Terminar Sessão</a>
             </div>
         </div>
 
-        <!-- Modal -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
- 
-                <h2 id="modal-title">Nova Tarefa</h2>
- 
-                <form id="edit-task-form">
-                    <label for="descricaoTarefa">Descrição da Tarefa</label>
-                    <input type="text" id="descricaoTarefa" name="descricaoTarefa" required><br><br>
-                    <label for="dataTarefa">Data</label>
-                    <input type="date" id="dataTarefa" name="dataTarefa" required><br><br>
-                    <button type="submit" class="btn-save" form="edit-task-form">Salvar</button>
-                    <button type="button" class="btn-cancel" onclick="window.location.href='home.html'">Cancelar</button>
-                </form>
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Nova Tarefa</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="edit-task-form">
+                            <div class="form-group">
+                                <label for="descricaoTarefa">Descrição da Tarefa</label>
+                                <input type="text" id="descricaoTarefa" name="descricaoTarefa" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dataTarefa">Data</label>
+                                <input type="date" id="dataTarefa" name="dataTarefa" class="form-control" required>
+                            </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary mr-2" data-dismiss="modal">Salvar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="table-container">
-            <div class="btn-new-task">
-                <a class="btn btn-new" href="#modal">Nova Tarefa</a>
+            <div class="text-right mb-3">
+                <button class="btn btn-success" data-toggle="modal" data-target="#modal">Nova Tarefa</button>
             </div>
-            
             <div class="table-title">
                 <h2>As minhas tarefas</h2>
             </div>
-            <table class="tasks-table">
-                <thead>
+            <table class="table">
+                <thead class="thead-light">
                     <tr>
                         <th>Nome da Tarefa</th>
                         <th>Data</th>
@@ -61,41 +69,21 @@
                         <td>Fazer Lab 1 de PW</td>
                         <td>2024-04-04</td>
                         <td><input type="checkbox"></td>
-                        <td><a class="btn btn-edit" href="#modal">Editar</a></td>
+                        <td><button class="btn btn-primary" data-toggle="modal" data-target="#modal">Editar</button></td>
                     </tr>
                     <tr>
                         <td>Fazer Lab 2 de PW</td>
                         <td>2024-04-05</td>
                         <td><input type="checkbox"></td>
-                        <td><a class="btn btn-edit" href="#modal">Editar</a></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td><button class="btn btn-primary" data-toggle="modal" data-target="#modal">Editar</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

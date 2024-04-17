@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" type="text/css" href="perfil.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
-    <form action="#" method="post">
-        <img src="avatar.png" alt="Avatar" class="avatar">
-        <br><br>
-        <input type="text" name="nome" placeholder="Nome">
-        <br>
-        <input type="email" name="email" placeholder="Email">
-        <br><br>
-        <input type="submit" value="Gravar">
-    </form>
+<body class="bg-light">
+    <div class="container">
+        <form action="#" method="post" class="col-md-6 mx-auto bg-white p-4 mt-5 rounded">
+            <img src="avatar.png" alt="Avatar" class="avatar img-fluid mb-4">
+            <div class="form-group">
+                <input type="text" name="nome" placeholder="Nome" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email" class="form-control">
+            </div>
+            <a href="home.html" class="btn btn-primary btn-block">Gravar</a>
+        </form>
+    </div>
 </body>
 </html>
+

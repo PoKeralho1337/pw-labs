@@ -4,31 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  <div id="login-container">
-    <button onclick="window.location.href = 'index.html'">Back</button>
-    <div id="login-form">
-      <h2>Login</h2>
-      <form>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
+  <div class="container">
+    <div class="row justify-content-center align-items-center" style="height: 100vh;">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title text-center">Login</h2>
+            <form>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"><a href="home.html">Login</a></button>
+                <span class="d-block text-center"><a href="forgotpassword.html">Forgot Password</a></span>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password">
-        </div>
-        <div class="form-group">
-          <button  class="login-button"><a href="home.html">Login</a></button>
-          <span> <a href="forgotpassword.html">Forgot Password</a></span>
-        </div>
-      </form>
+      </div>
     </div>
   </div>
+  <footer class="footer fixed-bottom">
+    <div class="container">
+      <p class="m-0">Copyright 2024 - All rights reservedby...</p>
+    </div>
+  </footer>
 </body>
-<footer>
-  <p>Copyright 2024 - All rights reservedby...</p>
-</footer> 
 </html>
